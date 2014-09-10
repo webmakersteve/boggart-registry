@@ -6,7 +6,7 @@ if (process.env.NODE_ENV === 'production') {
 
 var express = require('express');
 var cors = require('./lib/cors');
-
+var bodyparser = require('body-parser');
 var app = express();
 
 if (typeof process.env.PORT === 'undefined') {
@@ -14,16 +14,16 @@ if (typeof process.env.PORT === 'undefined') {
 }
 
 if (typeof process.env.DATABASE_URL === 'undefined') {
-    process.env.DATABASE_URL = '0.0.0.0';
+    process.env.DATABASE_URL = "";
+
 }
 
 app.configure(function () {
     app.use(cors);
     app.use(express.logger());
     app.use(express.compress());
-    app.use(express.json());
-    app.use(express.urlencoded());
-    app.use(express.multipart());
+    app.use(bodyparser.urlencoded({ extended: false }));
+    app.use(bodyparser.json());
     app.use(app.router);
     app.use(express.errorHandler({
         dumpExceptions: true,
