@@ -1,25 +1,28 @@
 {
-  "name": "bower-registry",
-  "version": "0.1.1",
-  "description": "The bower registry",
+  "name": "boggart-registry",
+  "version": "0.0.1",
+  "description": "Fork of the bower registry specializing in dealing with big files.",
   "main": "index.js",
   "scripts": {
     "test": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bower/registry"
+    "url": "https://github.com/boggart-pkg/registry"
   },
-  "author": "",
+  "author": "Stephen Parente",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bower/registry/issues"
+    "url": "https://github.com/bower/boggart-pkg/issues"
   },
   "dependencies": {
+    "body-parser": "^1.8.1",
     "express": "~3.4.8",
     "github": "~0.1.15",
     "newrelic": "~1.9.1",
     "pg": "~2.11.1",
+    "redis": "^0.12.1",
+    "s3": "^4.1.1",
     "ssh-url": "~0.1.5"
   },
   "devDependencies": {
