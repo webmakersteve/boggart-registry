@@ -1,4 +1,4 @@
-# Bower registry [![Build Status](https://travis-ci.org/bower/registry.svg?branch=master)](https://travis-ci.org/bower/registry)
+# This project is a fork of the wonderful bower project. 
 
 ## Create package
 
